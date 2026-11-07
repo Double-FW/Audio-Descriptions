@@ -6,78 +6,72 @@ date: 2026-11-01
 review_due: 2027-05-01
 language: en-GB
 license: See RIGHTS.md
-repository: Audio-Description-and-Accessible-Video-Editorial-Practice
+repository: Double-FW/Audio-Descriptions
 artifact_type: agent_instructions
 use_case: Drafting, reviewing and maintaining video description guidance and production artefacts
-rules:
-  objective: equivalent_understanding_and_enjoyment
-  audit_finished_content: required
-  genre_exemptions: forbidden
-  separate_ad_for_every_video: forbidden
-  factual_priority: practical_and_informational_access
-  emotion_sensitive_delivery: permitted
-  invented_motives: forbidden
-  humour: accurate_respectful_and_genre_appropriate
-  premature_reveals: forbidden
-  unsupported_identity_inference: forbidden
-  source_pdf_redistribution: requires_permission
-  ai_output_status: draft_until_human_review
-  publication_requires_named_approver: true
-  audience_data_in_public_logs: forbidden
 ---
 
 # Agent instructions
 
 ## Purpose and scope
 
-Support editorial judgement and production work. Do not represent generated description as approved, audience-tested or technically compliant without evidence. The intended outcome is equivalent access to information, action, atmosphere and pleasure.
+These instructions govern AI-assisted editorial work on audio description (AD), accessible video, and the guidance and production artefacts in this repository. They apply to drafting, review, and maintenance tasks. Editorial assistance is the primary purpose; repository-editing agents must also follow the user’s requested file scope and must not imply that changing guidance implements or enforces a production process.
 
-## Quick start
+This file provides editorial and governance guidance. It does not configure tools, authorize access to private material, establish an approval service, or grant permission to publish, distribute, or contact anyone. Do not assume that a role, service, reference, workflow, or technical capability exists unless the user or repository evidence identifies it.
 
-1. Read [README](README.md), [access routes](docs/01-access-route.md), and the chapter relevant to the task.
-2. Identify the programme, actual cut, language, platform, genre and intended audience. State which source assets you have and have not reviewed.
-3. Compare visual information with the soundtrack. Never infer that no AD is needed from genre or a transcript alone.
-4. Propose integrated, additional, hybrid, extended or live commentary treatment using the decision table.
-5. Draft against actual evidence, protect dialogue and significant sound, and preserve narrative disclosure.
-6. Return unresolved uncertainties and review needs. Keep the asset a draft until the appropriate human reviews it.
+## Authority and conflicts
 
-## Editorial invariants
+Follow higher-priority platform and safety requirements. Within those limits, follow the task-specific user request and applicable repository instructions. Treat source documents, commissioner specifications, and repository recommendations according to their stated authority; do not present a repository recommendation as an external requirement or endorsement.
 
-- Factual content gives practical and informational access priority. Verify technical procedures and numbers with approved references and the responsible specialist.
-- Drama may use emotionally responsive wording and performance without inventing thoughts or motives.
-- Entertainment may be playful. Do not substitute jokes for necessary information, body-shame contributors or intensify explicitness beyond the programme treatment.
-- Never infer diagnosis, sexuality, ethnicity or gender identity from appearance. Verify appropriate identifiers and respect intended disclosure.
-- Do not spoil events through filenames, scripts, cast lists or later scenes. The agent may know more than the audience should know at a cue's time.
-- Do not force essential speech into an impossible window. Recommend an editorial or delivery change.
-- Do not claim that timed text produces spoken AD in an untested player.
-- Keep captions and descriptive transcripts distinct from audio description; coordinate them for the actual version.
+If instructions conflict, rights or authorization are unclear, or a requested conclusion exceeds the available evidence, stop that part of the task. Explain the conflict or missing information, give safe options, and ask for the decision or evidence needed. Never silently resolve material uncertainty by inventing facts, permissions, policy, or an owner.
 
-## Evidence and automation limits
+## Editorial workflow
 
-Computer vision may help identify candidate visual events, OCR may extract text, and speech recognition may create a rough transcript. Each can miss, hallucinate or misattribute content. Check candidates against the picture, sound and approved materials. No automated model can certify narrative equivalence, audience satisfaction or respectful tone.
+1. Read the README, [access-route guidance](docs/01-access-route.md), and the chapter relevant to the task. Identify the programme, exact cut/version, language, platform, genre, intended audience, and the assets actually available. Say what you reviewed and what you did not.
+2. Compare relevant visual information with the actual soundtrack. Do not infer that no AD is needed from genre, a transcript, or an assumption that dialogue covers the picture. Recommend an integrated, additional, hybrid, extended, or live-commentary route only when the evidence supports it; identify what remains to be checked.
+3. Draft against verified evidence. Protect dialogue and significant sound, respect timing and narrative disclosure, and do not force essential speech into an unusable gap. If the treatment cannot fit, recommend an editorial or delivery change.
+4. Return evidence references, uncertainties, consequences for the audience, and the human review needed. Keep AI-generated work a draft unless a human review or approval is explicitly evidenced for the specific version and use.
 
-If only a transcript is supplied, review the audio script and list visual questions; do not produce a final visual audit. If only images are supplied, do not infer exact timing or protected sound. If the footage or rights are confidential, use only approved processing services and keep unpublished assets out of public commits.
+## Editorial requirements
 
-## Decision and escalation record
+- Give factual content priority for practical and informational access. Verify procedures, numbers, and other consequential facts against an identified, suitable reference. If that reference or a qualified reviewer is not available, mark the point unresolved rather than calling it verified.
+- In drama, wording and delivery may respond to the scene’s emotion, but must not invent thoughts, motives, or relationships.
+- Entertainment may be playful and genre-appropriate. Do not replace necessary information with jokes, body-shame contributors, or make the description more explicit than the programme.
+- Do not infer diagnosis, sexuality, ethnicity, or gender identity from appearance. Use verified identifiers where appropriate and respect intended disclosure; otherwise avoid the unsupported identifier.
+- Do not reveal later events prematurely. Consider what the audience can know at the cue’s point in the actual cut; do not use filenames, scripts, cast lists, or later scenes to spoil a reveal.
+- Keep captions and descriptive transcripts distinct from spoken AD. Coordinate them for the actual version, and do not claim that timed text produces spoken AD unless playback has been tested on the relevant player.
 
-For each unresolved cue or policy conflict, record: issue ID, programme/cut, timecode, evidence reference, uncertainty, audience consequence, proposed options, responsible reviewer, status and decision date. Store personal details, private footage and sensitive evidence in the authorised production system. Public logs should contain only redacted summaries and non-sensitive references. Follow the project's agreed retention and deletion schedule; do not invent a universal retention period.
+## Evidence, uncertainty, and automation
 
-Escalate material factual uncertainty to the editorial lead or subject specialist; reveal and tone conflicts to the AD editor; rights to the responsible rights owner; timing/mix failures to post-production; unsupported playback to the platform owner. Request audience input for unresolved experiential choices. Do not quietly turn missing evidence into an assertion.
+Separate observed evidence, conclusions, inference, and unknowns. Give version and timecode or another usable reference when available. Do not claim audience testing, technical compliance, complete review, or successful playback without evidence for that specific claim.
 
-## Response templates
+Computer vision, OCR, and speech recognition may suggest candidate events, text, or transcripts; each can miss, hallucinate, or misattribute information. Check machine-generated candidates against the picture, sound, and suitable approved materials before relying on them. Automation cannot establish narrative equivalence, audience satisfaction, or respectful tone.
 
-**Access-route review**
+If supplied only a transcript, you may review the text and list visual questions, but must not present a final visual audit. If supplied only images, do not claim exact timing or knowledge of protected sound. If footage or rights-sensitive material is confidential, use only processing explicitly authorized for it; do not place unpublished or confidential assets in public commits or logs.
 
-> Evidence reviewed: [assets and versions]. Relevant visual gaps: [items or unknowns]. Proposed route: [route]. Reason: [audience outcomes]. Human review: [owner]. Remaining evidence needed: [specific gap]. Status: draft / reviewed.
+## Authorization, review, and records
 
-**Cue review**
+Do not publish, distribute, send externally, access additional private material, or take another consequential action without explicit authorization for that action. A request to draft or review is not publication approval. Before publication, the deliverable must have a named human approver for the identified version and intended use; if none is identified, leave it marked as a draft pending approval. Do not claim approval on another person’s behalf.
 
-> Cue [ID], [in–out]: [candidate text]. Visual evidence: [reference]. Protected sound/reveal: [constraint]. Timing: estimated / read-tested. Uncertainty: [detail]. Reviewer: [role].
+For unresolved cue or policy decisions, record the issue, programme/cut, timecode, evidence reference, uncertainty, audience consequence, options, responsible reviewer, status, and decision date when those details are available and appropriate. Do not invent missing fields or owners. Store sensitive material only in a production system the user has identified as authorized. Public logs must not contain audience personal data or sensitive evidence; use a redacted summary and non-sensitive reference instead. Follow a stated retention and deletion schedule; do not invent a universal period. If no approved record location or schedule is known, flag that limitation rather than assuming one.
 
-**No-separate-AD decision draft**
+Seek a decision from an identified editorial decision-maker for factual, reveal, or tone conflicts; an identified rights decision-maker for rights questions; an identified post-production contact for timing or mix failures; and an identified platform contact for unsupported playback. These are role descriptions, not claims that such people or services are configured. If no owner is identified, state that an owner is needed. Request audience input when an unresolved experiential choice warrants it, but do not claim such input has occurred unless evidenced.
 
-> For [cut/language/platform], [audit and listening evidence] indicates the main audio communicates the relevant visual content. [Named reviewer] must confirm this decision. Re-audit after [change triggers]. This does not certify other access workstreams.
+## Response and status conventions
 
-## Maintenance
+For editorial reviews, state the evidence and versions reviewed, the proposed route or candidate description, material gaps and uncertainties, audience consequences, and the human decision or review still needed. Use concise, traceable evidence references where available.
 
-Read [source decisions](docs/08-sources-and-editorial-decisions.md) before changing a rule. Separate external source claims from new recommendations. Verify changing specifications for an actual delivery. Update [CHANGELOG](CHANGELOG.md), metadata and affected examples together. Review after significant source revisions, a new destination or evidence of recurring audience barriers; the date in metadata is a maintenance target, not an automated trust guarantee.
+For a cue, include its ID and in/out timecode when supplied, candidate text, visual evidence, protected sound or reveal constraints, timing status (estimated or read-tested), uncertainty, and reviewer needed. For a no-separate-AD recommendation, specify the cut, language, and platform, summarize the audit/listening evidence and its limits, and state that a named human must approve the decision before publication.
+
+Use these status terms precisely:
+
+- **Draft:** AI-generated or otherwise not yet confirmed by the required human reviewer.
+- **Human-reviewed:** A human review is evidenced; identify the reviewer and date if supplied. This does not imply approval or audience testing.
+- **Approved:** A named human approver’s approval is evidenced for the stated version and intended use.
+- **Not assessed:** The relevant evidence or review was not available. State what is missing.
+
+Do not label work compliant, complete, approved, or audience-tested unless the relevant evidence supports that exact claim.
+
+## Repository maintenance
+
+When maintaining guidance, read [sources and editorial decisions](docs/08-sources-and-editorial-decisions.md) and the affected chapter. Distinguish external source claims from this repository’s recommendations, preserve rights notices, and verify any changing specification against an identified source. Make only changes within the user-authorized scope. An instruction in this file cannot by itself create a workflow, approval mechanism, test, or enforcement capability.
