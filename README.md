@@ -55,10 +55,12 @@ The workflows, templates, release gates and examples are Double FW editorial rec
 
 Use the commissioner's current access and delivery specification for the relevant service and territory. This repository is not a complete legal framework or a claim that passing its checklist proves standards conformance. Where prerecorded synchronised video needs description under WCAG AA, a transcript alone does not replace that audio access. Live description remains an audience need even where it is not required by WCAG.
 
-## Repository setup
+## Contributing and maintenance
 
-Suggested GitHub name: `Audio-Description-and-Accessible-Video-Editorial-Practice`.
+This is the published [Double FW Audio Descriptions repository](https://github.com/Double-FW/Audio-Descriptions). Read the Markdown guidance directly; no application build is needed.
 
-Create an empty repository under the intended account, then upload the **contents** of this folder so that `README.md` is at the repository root. Keep the `docs`, `templates` and `examples` directories intact. No build process is required. This package has not created or published a remote GitHub repository.
+Use [Contributing](CONTRIBUTING.md) to propose an evidence-based correction or editorial improvement. Record material changes in the [changelog](CHANGELOG.md), keep links and source qualifications current, and distinguish a guidance update from an approved production decision.
 
-Copyright and licensing are stated in [RIGHTS.md](RIGHTS.md). Version history is in [CHANGELOG.md](CHANGELOG.md).
+The [RAG reference and activities](Audio-Descriptions-RAG-and-Prompts/README.md) provide a selected-source reading and retrieval edition. They do not supply programme media, third-party PDFs, completed audience research or an operational approval service.
+
+Copyright, original-material MIT licensing and third-party boundaries are stated in [RIGHTS.md](RIGHTS.md) and [LICENSE](LICENSE). GitHub remains the authoring source for the existing weekly Hugging Face export; see [the sync setup](huggingface/SETUP.md).

@@ -1,36 +1,36 @@
-# Source coverage — Audio Descriptions
+# Source coverage for Audio Descriptions
 
-Repository: https://github.com/Double-FW/Audio-Descriptions  
-Snapshot commit: `8c0041e26c4410a7d5c5b2881c394168d9be5c87`  
-Retrieved: 8 November 2026  
-Coverage: **18/18 tracked files; 79,538 original UTF-8 bytes retained.**
+Source revision: `9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1`. Prepared 2026-11-20.
 
-Every file in the recursive repository inventory was fetched by its blob SHA. Every preserved source was checked against the inventory byte count and Git blob hash. Source bodies are complete; the RAG adds navigation and provenance and resolves recognised inline source links. All source files are also included separately without content edits. No branches, issues, pull requests, history, submodules or external linked materials are claimed as part of this snapshot. The inventory reported no truncation and contained only regular text-file blobs and directories.
+This register covers 21 selected knowledge/governance/rights files, not every tracked file. Canonical source bodies are complete in the RAG reference with the disclosed navigation transformation. SHA-256 and Git blob hashes below identify the original UTF-8 bytes before transformation. Hash agreement establishes source correspondence, not truth, currency, approval or effectiveness. External linked contents, Git history and the derived pack itself are outside this source set.
 
-| Source ID | File at pinned revision | Role | Original bytes | Blob SHA |
-| --- | --- | --- | ---: | --- |
-| S001 | [docs/01-access-route.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/01-access-route.md) | Primary content/production guidance | 4,944 | `b48a4734f9efab42a8e5a2cc7ec446563a197be3` |
-| S002 | [README.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/README.md) | Content/production reference material | 6,045 | `e22aa52c2698e69d96d967f7ae93667550f4142d` |
-| S003 | [AGENTS.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/AGENTS.md) | Source governance; advisory context | 8,996 | `12f1db202599f111cb17381c59e8a9cb5b40a8ef` |
-| S004 | [RIGHTS.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/RIGHTS.md) | Content/production reference material | 965 | `f43ec2f909af918d43cc7c6558d9f497ae82b4b7` |
-| S005 | [docs/02-production-workflow.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/02-production-workflow.md) | Content/production reference material | 4,846 | `c2ef6d2ea467591202c4eea6fdecbccfa6614b98` |
-| S006 | [docs/03-radio-led-scripting.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/03-radio-led-scripting.md) | Content/production reference material | 6,141 | `c33d945925711b7df7fc67d0465e32c2fb5cdb6b` |
-| S007 | [docs/04-ad-editorial-principles.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/04-ad-editorial-principles.md) | Content/production reference material | 6,000 | `99806a52b0471e96a3d9e115c9f448941ec37aea` |
-| S008 | [docs/05-genre-and-tone.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/05-genre-and-tone.md) | Content/production reference material | 7,025 | `62635624b5e2f347d4a9b8645ef37ecd894a4529` |
-| S009 | [docs/06-recording-and-delivery.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/06-recording-and-delivery.md) | Content/production reference material | 5,895 | `8715453a83a7757d229d1681038e8fa7bd2a4f0f` |
-| S010 | [docs/07-evaluation-and-qa.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/07-evaluation-and-qa.md) | Content/production reference material | 5,491 | `609a56901f87a12efa968e675d566c68c905ea5b` |
-| S011 | [docs/08-sources-and-editorial-decisions.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/docs/08-sources-and-editorial-decisions.md) | Content/production reference material | 9,175 | `098cf3996589b0a193b014cb3b9a31d4116338c1` |
-| S012 | [examples/editorial-examples.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/examples/editorial-examples.md) | Content/production reference material | 5,718 | `fde7c48295d4a10edeb1cb83815b6816ec478d7b` |
-| S013 | [templates/ad-cue-sheet.csv](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/templates/ad-cue-sheet.csv) | Supporting configuration or implementation context | 312 | `f09a3be8fdad6e4c6b9e5f057f2b58cc466e62de` |
-| S014 | [templates/audience-evaluation.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/templates/audience-evaluation.md) | Content/production reference material | 2,258 | `8076f37e302334d01fc85446eeea2df39adbd02c` |
-| S015 | [templates/commissioning-brief.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/templates/commissioning-brief.md) | Content/production reference material | 2,133 | `37554487c6b4e39c6a7b36412b3b73985fc7e17e` |
-| S016 | [templates/release-and-decision-record.md](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/templates/release-and-decision-record.md) | Content/production reference material | 2,245 | `e9403e4f3ce761cbfc28e55bb675700e1f9b4756` |
-| S017 | [templates/visual-information-audit.csv](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/templates/visual-information-audit.csv) | Supporting configuration or implementation context | 283 | `8666df37dbd0b292ff6425886ad32d4465cb72b4` |
-| S018 | [LICENSE](https://github.com/Double-FW/Audio-Descriptions/blob/8c0041e26c4410a7d5c5b2881c394168d9be5c87/LICENSE) | Licence / rights notice | 1,066 | `3149d6917c830929b7a4b29366a0ab796207731c` |
+| Source ID | Canonical source at pinned revision | Bytes | Git blob SHA | SHA-256 |
+| --- | --- | ---: | --- | --- |
+| S001 | [docs/01-access-route.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/01-access-route.md) | 4944 | `b48a4734f9efab42a8e5a2cc7ec446563a197be3` | `cf4f15d945522b78f1a5cb736d1243975bd6e8921b18cca61dcb09869b9da8e7` |
+| S002 | [README.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/README.md) | 6523 | `2ed253fa7e7b493019bc5ceb235cd499e890d230` | `cb964660b1b7a74895bfd44dc34e0da88052906afc3b389d3acb30f2db9aeae6` |
+| S003 | [AGENTS.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/AGENTS.md) | 8996 | `12f1db202599f111cb17381c59e8a9cb5b40a8ef` | `3732f53555d8576efe772c2b71e6e73bf1fc5d27dc0c2cfdd809d16d8a335c11` |
+| S004 | [RIGHTS.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/RIGHTS.md) | 1714 | `d9fb9b8187f3bc419c94738993161db71574a4da` | `c2fc3f71336a8d433d9829f64c05c63b5b09f329038104f3ce1e1ed4bd636fdf` |
+| S005 | [docs/02-production-workflow.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/02-production-workflow.md) | 4846 | `c2ef6d2ea467591202c4eea6fdecbccfa6614b98` | `e3ecbec5a43e27316fdfa6f81cd45322b96eadba521b643bcb7157ad0cbf59f8` |
+| S006 | [docs/03-radio-led-scripting.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/03-radio-led-scripting.md) | 6141 | `c33d945925711b7df7fc67d0465e32c2fb5cdb6b` | `1faf62f6ea814a2c4458b1978850fb87a63aa9dc6b55b8ce509954f00a6902ce` |
+| S007 | [docs/04-ad-editorial-principles.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/04-ad-editorial-principles.md) | 6000 | `99806a52b0471e96a3d9e115c9f448941ec37aea` | `2790b1ac8c82c31455a514a8588ec52f2c82e8febcc77f1b01e47f1f1a6dcf48` |
+| S008 | [docs/05-genre-and-tone.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/05-genre-and-tone.md) | 7025 | `62635624b5e2f347d4a9b8645ef37ecd894a4529` | `98b2ac69da3c90566cf7e08ea75e486c08bbcb5548943017bfdcc6041609d090` |
+| S009 | [docs/06-recording-and-delivery.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/06-recording-and-delivery.md) | 5895 | `8715453a83a7757d229d1681038e8fa7bd2a4f0f` | `cbeef235dc6d5863265ebd5bc2912c5503360e2a075fe42d87334c64835d59a9` |
+| S010 | [docs/07-evaluation-and-qa.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/07-evaluation-and-qa.md) | 5491 | `609a56901f87a12efa968e675d566c68c905ea5b` | `5469712a062253358328b8db22424322ff867c6cff47e3e6cf9ea3c98f46765e` |
+| S011 | [docs/08-sources-and-editorial-decisions.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/docs/08-sources-and-editorial-decisions.md) | 9175 | `098cf3996589b0a193b014cb3b9a31d4116338c1` | `53dc3971d1c35147fca116b2055a108cb931ce9896f240b05fa11383496ecb4d` |
+| S012 | [examples/editorial-examples.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/examples/editorial-examples.md) | 5718 | `fde7c48295d4a10edeb1cb83815b6816ec478d7b` | `d3a8f9594c9d1f8dd20508ad088b438ee359f4bfd00cc087365b489a280fe15b` |
+| S013 | [templates/ad-cue-sheet.csv](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/templates/ad-cue-sheet.csv) | 312 | `f09a3be8fdad6e4c6b9e5f057f2b58cc466e62de` | `8e6f1c20fce2f9d4767eccf24a156f6d6f79540eb31ad415256d1b0a1ffe99e1` |
+| S014 | [templates/audience-evaluation.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/templates/audience-evaluation.md) | 2258 | `8076f37e302334d01fc85446eeea2df39adbd02c` | `f815888a0a952d19357bffbcac9eda7bf1a547317a9f7c18196dbf629d25125e` |
+| S015 | [templates/commissioning-brief.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/templates/commissioning-brief.md) | 2133 | `37554487c6b4e39c6a7b36412b3b73985fc7e17e` | `2fe86786f4a7efa4f8c325a82504036aaa7acadae92a188965e4564f07e8339e` |
+| S016 | [templates/release-and-decision-record.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/templates/release-and-decision-record.md) | 2245 | `e9403e4f3ce761cbfc28e55bb675700e1f9b4756` | `6c2761771ce7e723bd464d866454e163dacea811bed7937ed72a11c45adb106f` |
+| S017 | [templates/visual-information-audit.csv](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/templates/visual-information-audit.csv) | 283 | `8666df37dbd0b292ff6425886ad32d4465cb72b4` | `d63b9bf905eb73c284590ff2ed84a1edb1e82d4f3b3badab0ba6eb265bb88644` |
+| S018 | [LICENSE](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/LICENSE) | 1066 | `3149d6917c830929b7a4b29366a0ab796207731c` | `7ef02bc0b6ba376de57be5f27784eef23df6a74068a4a2a172f95ba2c605b7af` |
+| S019 | [Production_Workflow_and_Handoff_Map.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/Production_Workflow_and_Handoff_Map.md) | 8413 | `58c68c941ea8bddc04ecd918d7dc97041845be5d` | `e368c9d9106571c6a4ab8a8b526ea193fd38e87ff1778f210c278611b625a95f` |
+| S020 | [CONTRIBUTING.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/CONTRIBUTING.md) | 2080 | `2efef0be85e28f3d2add045b6876830eed6ee6a2` | `fb57abeb83ca0955c6e6feffda8081b70288c65cb4e17b68ba2b54eb5934f9af` |
+| S021 | [CHANGELOG.md](https://github.com/Double-FW/Audio-Descriptions/blob/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1/CHANGELOG.md) | 1152 | `58dd23cb1e3ddb87970937bc0bb489a6d1411233` | `34ed3cb313481c89c56d328622e3b9b0bb779a1864d246183a62253b983e6429` |
 
-## Heading lookup
+## Original heading lookup
 
-Use these original headings as retrieval labels within the corresponding source section. Repeated headings and source-local identifiers retain their original scope. Documents without Markdown headings can be retrieved by their source ID and explicit terms.
+Headings keep their original source scope; repeated headings do not imply independent corroboration.
 
 - **S001** · 1. Decide how the content will work through sound
 - **S001** · Make the decision before filming, then verify it after editing
@@ -43,7 +43,7 @@ Use these original headings as retrieval labels within the corresponding source 
 - **S002** · Working resources
 - **S002** · Relationship to other Double-FW guidance
 - **S002** · Foundations and authority
-- **S002** · Repository setup
+- **S002** · Contributing and maintenance
 - **S003** · Agent instructions
 - **S003** · Purpose and scope
 - **S003** · Authority and conflicts
@@ -53,7 +53,10 @@ Use these original headings as retrieval labels within the corresponding source 
 - **S003** · Authorization, review, and records
 - **S003** · Response and status conventions
 - **S003** · Repository maintenance
-- **S004** · Copyright, sources and licence status
+- **S004** · Copyright, sources and licence
+- **S004** · Original repository material
+- **S004** · Third-party sources and materials
+- **S004** · Attribution and endorsement
 - **S005** · 2. Plan and execute the production
 - **S005** · Assign decisions to people
 - **S005** · Workflow and stage gates
@@ -137,3 +140,15 @@ Use these original headings as retrieval labels within the corresponding source 
 - **S016** · Delivery manifest
 - **S016** · Findings and resolution
 - **S016** · Approval and maintenance
+- **S019** · Production workflow and handoff map
+- **S019** · Choose the source for the work
+- **S019** · Work from meaning to real delivered outputs
+- **S019** · Preserve variant relationships
+- **S019** · A production handoff and evidence record
+- **S019** · Keep evidence types distinct
+- **S020** · Contributing to Audio Descriptions
+- **S020** · Propose a focused change
+- **S020** · Check the result
+- **S020** · Rights and attribution
+- **S021** · Changelog
+- **S021** · 20 November 2026
