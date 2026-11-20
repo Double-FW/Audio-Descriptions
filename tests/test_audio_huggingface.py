@@ -82,14 +82,22 @@ class AudioSyncTests(unittest.TestCase):
         (self.repo/'docs/04-ad-editorial-principles.md').unlink();self.commit()
         with self.assertRaises(ValueError):self.build()
 
-    def test_current_rights_and_historical_snapshot_are_preserved(self):
+    def test_current_rights_and_selected_reference_are_consistent(self):
         self.build();docs=self.rows('documents.jsonl')
         rights=next(r for r in docs if r['source_path']=='RIGHTS.md')
         self.assertIn('MIT Licence',rights['text'])
         rag=next(r for r in docs if r['source_path']==exporter.RAG)
-        self.assertEqual(rag['source_temporal_scope'],'dated_support_pack')
+        self.assertEqual(rag['source_temporal_scope'],'support_pack_at_pinned_source_revision')
         self.assertTrue(rag['embedded_snapshot_commit'])
+        self.assertIn('license: MIT',rag['text'])
+        self.assertIn('## S004 — RIGHTS.md',rag['text'])
+        self.assertNotIn('no public reuse licence was selected',rag['text'])
         self.assertFalse(any(r['source_path']==exporter.RAG for r in self.rows('knowledge_chunks.jsonl')))
+        provenance=json.loads((self.out/'provenance.json').read_text())
+        self.assertTrue(provenance['rag_reference_validated'])
+        self.assertEqual(provenance['rag_snapshot_metadata']['source_file_count'],21)
+        for path in ('CONTRIBUTING.md','CHANGELOG.md'):
+            self.assertTrue(any(r['source_path']==path for r in docs))
         (self.repo/'RIGHTS.md').write_text('Unreviewed replacement');self.commit()
         with self.assertRaises(ValueError):self.build()
 
@@ -173,5 +181,20 @@ class AudioSyncTests(unittest.TestCase):
         self.assertIn("github.repository == 'Double-FW/Audio-Descriptions'", workflow['jobs']['publish']['if'])
         self.assertIn('workflow_dispatch', workflow['on'])
         self.assertEqual(common.load_config(ROOT)['destination_dataset'], 'GarethFW/Audio_Description')
+
+
+    def test_source_drift_blocks_stale_compiled_reference(self):
+        self.build()
+        path=self.repo/'README.md'
+        path.write_text(path.read_text()+'\nA newly authored clarification.\n');self.commit()
+        with self.assertRaisesRegex(ValueError,'Selected source changed'):
+            self.build()
+
+    def test_compiled_body_tampering_blocks_export(self):
+        self.build()
+        path=self.repo/exporter.RAG
+        path.write_text(path.read_text()+'\nUnsupported replacement claim.\n');self.commit()
+        with self.assertRaisesRegex(ValueError,'Compiled reference'):
+            self.build()
 
 if __name__ == '__main__': unittest.main()

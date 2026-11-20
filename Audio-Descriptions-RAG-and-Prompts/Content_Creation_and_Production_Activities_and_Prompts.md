@@ -1,14 +1,14 @@
 # Audio Descriptions: human-managed content creation and production activities and prompts
 
-**Prepared:** 8 November 2026 · **Source revision:** `8c0041e26c4410a7d5c5b2881c394168d9be5c87`  
-**Source:** [Double-FW/Audio-Descriptions](https://github.com/Double-FW/Audio-Descriptions/tree/8c0041e26c4410a7d5c5b2881c394168d9be5c87)  
+**Prepared:** 20 November 2026 · **Source revision:** `9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1`  
+**Source:** [Double-FW/Audio-Descriptions](https://github.com/Double-FW/Audio-Descriptions/tree/9cdc7f5ee1b1c26f09e9b259400c56a0d57696b1)  
 **Audience:** authors, editors, designers, publishers, communication teams, producers, commissioners, access-service practitioners and technical/quality partners.
 
 ## Where the repository is useful
 
 Use this repository to decide and deliver meaningful access through sound: integrated radio-led scripting, commentary, separate AD, extended versions and associated text routes. Its workflow, editorial and genre guidance, recording/delivery distinctions, QA methods, examples and templates support producers, writers, describers, directors and sound teams.
 
-Not every production needs a separate AD track, but a no-separate-AD decision needs a positive, bounded visual-information audit and final-cut verification. Templates and invented examples are not completed production evidence. Preserve factual information, emotional tone, timing and intended audience knowledge without inventing psychology or identity. RIGHTS.md says no public reuse licence was selected while a root LICENSE is present; retain both notices and leave that inconsistency for the rights owner rather than declaring a new licence.
+Not every production needs a separate AD track, but a no-separate-AD decision needs a positive, bounded visual-information audit and final-cut verification. Templates and invented examples are not completed production evidence. Preserve factual information, emotional tone, timing and intended audience knowledge without inventing psychology or identity. Current RIGHTS.md and LICENSE apply MIT to original Double FW material, with attribution and third-party rights boundaries retained.
 
 The activities below are an editorial application of the repository, not a claim that it already contains a complete organisational process. AI can organise material, draft options and scripts, identify inconsistencies and prepare specifications or evidence summaries. Authors and editors preserve factual meaning and editorial intent. Designers and technical practitioners implement and verify delivered formats. Qualified access-service specialists review their work, and affected audiences inform the experience. Accountable publishers/producers retain creative, acceptance, rights and release decisions. Assign these responsibilities to actual people locally; the examples do not establish a new team or approval body.
 

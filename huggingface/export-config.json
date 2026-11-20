@@ -1,7 +1,7 @@
 {
   "source_repository": "Double-FW/Audio-Descriptions",
   "destination_dataset": "GarethFW/Audio_Description",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "files": [
     "AGENTS.md",
     "Audio-Descriptions-RAG-and-Prompts/Content_Creation_and_Production_Activities_and_Prompts.md",
@@ -24,7 +24,9 @@
     "templates/audience-evaluation.md",
     "templates/commissioning-brief.md",
     "templates/release-and-decision-record.md",
-    "templates/visual-information-audit.csv"
+    "templates/visual-information-audit.csv",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md"
   ],
   "required_files": [
     "AGENTS.md",
@@ -49,7 +51,9 @@
     "templates/commissioning-brief.md",
     "templates/release-and-decision-record.md",
     "templates/visual-information-audit.csv",
-    "LICENSE"
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md"
   ],
   "document_only_files": [
     "Audio-Descriptions-RAG-and-Prompts/RAG_Reference.md",

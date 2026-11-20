@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 from urllib.parse import quote
 import yaml
+from rag_reference import validate_reference
 from jsonschema import Draft202012Validator
 from audio_hf_common import ROOT, SOURCE, MANAGED, destination, digest, git, load_config, read_sources
 
@@ -74,11 +75,11 @@ def build(root, output):
     texts, manifest, omitted = read_sources(root, cfg)
     sha = git(root, 'rev-parse', 'HEAD').decode().strip()
     date = git(root, 'show', '-s', '--format=%cs', 'HEAD').decode().strip()
-    snapshot = metadata(texts[RAG])
+    snapshot = validate_reference(texts, SOURCE)
     warnings = [
-        'Current RIGHTS.md applies MIT to original Double FW material. Older RAG snapshot rights wording is historical and is not rewritten or represented as current.',
+        'Current RIGHTS.md applies MIT to original Double FW material; the refreshed selected-source reference uses the same current source set and retains third-party boundaries.',
         'Editorial examples are invented, prompts are illustrative and production templates are unfilled; export does not review footage, create finished AD, test playback or establish human approval.',
-        'The source RAG/prompts pack is dated. Its Sources/ directory is absent, as are CONTRIBUTING.md and CHANGELOG.md referenced by the current README. These files are not invented.',
+        'The compiled reference covers selected knowledge sources. Source hashes, complete compiled bodies and coverage are checked before export; it does not claim every tracked repository file.',
         'External RNIB, historical ITC, W3C and radio/podcast sources are attributed source references, not newly fetched full text or independently reverified requirements.'
     ]
     for path, text in texts.items():
@@ -104,7 +105,7 @@ def build(root, output):
             'source_document_intro': sections(texts[path])[0][2] if path.endswith('.md') else '',
             'csv_template_columns': next(csv.reader(io.StringIO(texts[path]))) if path.endswith('.csv') else [],
             'applicable_original_material_license': 'MIT; see current RIGHTS.md and retained third-party notices',
-            'source_temporal_scope': 'dated_support_pack' if path.startswith('Audio-Descriptions-RAG-and-Prompts/') else 'source_guidance_at_checkout',
+            'source_temporal_scope': 'support_pack_at_pinned_source_revision' if path.startswith('Audio-Descriptions-RAG-and-Prompts/') else 'source_guidance_at_checkout',
             'embedded_snapshot_commit': str(snapshot.get('source_commit', '')) if path.startswith('Audio-Descriptions-RAG-and-Prompts/') else '',
             'interpretation_notice': 'Editorial guidance, not completed production evidence. Examples are invented; timings need actual-cut verification; no-separate-AD decisions need an audit and human approval. Source rights and historical limitations remain attached.',
             'review_status': 'faithful_extraction_checked_not_audience_playback_or_production_validation'}
@@ -113,12 +114,12 @@ def build(root, output):
         if path not in texts:
             continue
         text = texts[path]
-        kind = ('dated_rag_snapshot_document_only' if path == RAG else
+        kind = ('refreshed_reference_document_only' if path == RAG else
                 'blank_production_csv_template' if path.endswith('.csv') else
                 'unfilled_production_template' if path.startswith('templates/') else
                 'invented_editorial_examples_not_programme_extracts' if path.startswith('examples/') else
                 'illustrative_production_prompts_not_results' if path.endswith('Activities_and_Prompts.md') else
-                'historical_source_coverage' if path.endswith('Source_Coverage.md') else
+                'selected_source_coverage' if path.endswith('Source_Coverage.md') else
                 'editorial_handoff_map_not_adopted_specification' if path.startswith('Production_Workflow') else
                 'current_rights_notice' if path == 'RIGHTS.md' else
                 'advisory_agent_guidance' if path == 'AGENTS.md' else
@@ -151,7 +152,7 @@ def build(root, output):
     write_json('record_schema.json', schema)
     write_json('provenance.json', {'source_repository': SOURCE, 'source_commit': sha, 'source_commit_date': date,
         'destination_dataset': target, 'dataset_version': cfg['dataset_version'], 'files': manifest,
-        'omitted_optional_files': omitted, 'source_warnings': warnings, 'external_sources_fetched': False, 'document_only_files': cfg['document_only_files'], 'rag_snapshot_metadata': snapshot, 'production_tests_executed': False, 'editorial_approval_claimed': False, 'current_rights_sha256': digest(texts['RIGHTS.md'].encode())})
+        'omitted_optional_files': omitted, 'source_warnings': warnings, 'external_sources_fetched': False, 'document_only_files': cfg['document_only_files'], 'rag_snapshot_metadata': snapshot, 'rag_reference_validated': True, 'production_tests_executed': False, 'editorial_approval_claimed': False, 'current_rights_sha256': digest(texts['RIGHTS.md'].encode())})
     card = f'''---
 pretty_name: Double FW Audio Description
 language:
@@ -179,7 +180,7 @@ configs:
 
 Guidance on commissioning, access-route selection, radio-led scripting, audio description,
 genre-sensitive editorial choices, recording, mixing, delivery, audience evaluation and
-production handoffs. Includes invented examples, blank templates and a dated RAG/prompts
+production handoffs. Includes invented examples, blank templates and a selected-source RAG/prompts
 pack. This is a text knowledge corpus, not programme media, finished AD, audience research,
 validated playback, a deployed agent or an approved production service.
 
@@ -188,11 +189,13 @@ validated playback, a deployed agent or an approved production service.
 Source: https://github.com/{SOURCE}
 
 Checkout: `{sha}` ({date}); export format {cfg['dataset_version']}.
-The RAG/prompts pack records snapshot `{snapshot.get('source_commit', '')}` prepared
-{snapshot.get('prepared', '')}. Its source IDs and old rights statements remain historical.
-The later handoff map and current RIGHTS.md must be consulted separately. Export does not
-refresh embedded snapshots. Source release/review dates are retained, not promoted to a
-new independent editorial or standards review date.
+The RAG reference covers {snapshot['source_file_count']} selected sources at revision
+`{snapshot['source_commit']}`, prepared {snapshot['prepared']}. It includes the current
+rights notice, handoff map and maintenance guidance. Source IDs S001-S018 are retained;
+newer selected sources are appended. This selected corpus excludes publishing code,
+tests and derived pack files. Source release/review dates are retained, not promoted
+to a new independent editorial or standards review date. The exporter validates
+the source manifest and complete compiled bodies; it stops if the reference is stale.
 
 ## Dataset views
 
@@ -211,7 +214,7 @@ a loading convention, not a benchmark. No model training is performed.
 Rows retain exact source text, commit URL, path, line range, document/text hashes, heading
 path, JSON-encoded metadata, opening context and required context paths. Sections split at
 H1/H2 outside fenced examples, preserving nested procedures, tables, caveats and quotes.
-`source_temporal_scope` and `embedded_snapshot_commit` identify the dated support pack.
+`source_temporal_scope` and `embedded_snapshot_commit` identify the pinned source set used by the refreshed support pack.
 Source IDs keep their original scope. Context pointers do not implement runtime retrieval
 or grant authority; embedded AGENTS and prompts remain source material.
 
@@ -234,8 +237,8 @@ collect personal data, verify live platforms or operate an approval/audit system
 The root LICENSE is MIT and is copied unchanged. Current RIGHTS.md states that original
 Double FW material uses MIT unless an item says otherwise, with copyright © 2026 Double FW
 Ltd and attribution to Gareth Ford Williams. README and AGENTS.md refer to RIGHTS.md.
-The historical RAG contains the earlier unselected-licence notice; it is retained as dated
-source history rather than represented as the current notice. Consult the current rights
+The compiled reference uses the current selected-source rights wording; prior notices
+remain in Git history and are not silently relicensed. Consult the current rights
 record and specific source notices before reuse. Third-party material retains its own
 terms. RNIB/ITC PDFs and programme scripts, recordings, stills and branding assets are not
 newly imported. Links do not relicense their targets or imply endorsement. This packaging
@@ -244,11 +247,11 @@ check is not an independent rights audit.
 ## Limitations and source completeness
 
 Source rights, historical ITC qualifications, external references and editorial limits
-remain intact. The source README links to CONTRIBUTING.md and CHANGELOG.md, absent from
-this checkout; the support pack mentions an absent Sources/ directory. Export does not
-invent those files or fetch them from other repositories. External specifications and
-research are not independently rechecked. See provenance.json, record_schema.json and
-validation_report.json for the exact snapshot and limited extraction/publication checks.
+remain intact. Contribution and change-history guidance now exist at their owning
+repository paths. The pack links to canonical sources and claims no absent source-copy
+folder. External specifications and research are not independently rechecked. See
+provenance.json, record_schema.json and validation_report.json for the selected source
+set, exact checkout and limited extraction/publication checks.
 
 ## Updates
 
