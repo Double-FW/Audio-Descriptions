@@ -64,3 +64,11 @@ Use [Contributing](CONTRIBUTING.md) to propose an evidence-based correction or e
 The [RAG reference and activities](Audio-Descriptions-RAG-and-Prompts/README.md) provide a selected-source reading and retrieval edition. They do not supply programme media, third-party PDFs, completed audience research or an operational approval service.
 
 Copyright, original-material MIT licensing and third-party boundaries are stated in [RIGHTS.md](RIGHTS.md) and [LICENSE](LICENSE). GitHub remains the authoring source for the existing weekly Hugging Face export; see [the sync setup](huggingface/SETUP.md).
+
+## About the author
+
+Gareth Ford Williams is a senior leader in accessibility and inclusive design and co-founder of Double FW Ltd. His work spans accessibility, UX, technical standards, assistive technology and inclusive media. At the BBC, he led accessibility and UX work and chaired standards governance, translating research and policy into practical guidance.
+
+## About Double FW Ltd
+
+Double FW Ltd is a UK accessibility and inclusive design consultancy. It helps organisations build accessibility into strategy, governance, brands, products, content and services. Its public repositories provide practical guidance for people and AI-assisted workflows.
